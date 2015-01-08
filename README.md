@@ -60,6 +60,6 @@ id         | char    | 5
 name       | char    | 255
 email      | text    | -
 mobile     | varchar | 13
-ping       | char      4
+pin        | char    | 4
   
 Also, be sure to create a admin in sql. Otherwise, you cannot access the administrator page. 
