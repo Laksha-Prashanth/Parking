@@ -25,7 +25,7 @@ administrator
 customers
 
 The description of each table is as follows:
-Slot
+#####Slot
 
 Attributes | Type | Size
 ---------- | ---- | ----
@@ -33,7 +33,7 @@ id | char | 3
 type | char |1
 free | char |1
   
-Users
+#####Users
 
 Attributes | Type | Size
 ---------- | ---- | ----
@@ -45,14 +45,14 @@ exitDate   | date | -
 slot       | char | 3
 
 
-administrator
+#####administrator
 
 Attributes | Type    | Size
 ---------- | ----    | ----
 username   | varchar | 25
 password   | varchar | 30
 
-customers
+#####customers
 
 Attributes | Type    | Size
 ---------- | ----    | ----
