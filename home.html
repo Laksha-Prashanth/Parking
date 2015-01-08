@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+<head>
+<title>SNU Parking Gateway</title>
+<link type="text/css" rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+<div id="boast">
+<img src="http://snu.edu.in/images/home/shiv-nadar-logo.gif" style="margin-left:27.5%;"/>
+<h2 style="text-align:center;">Parking Gateway</h2>
+<p style="font-size:20px; padding-left:5%;">
+Swipe your SNU Parking Gateway Mastercard or enter your details manually.
+</p>
+<p style="font-size:18px; padding-left:5%;">
+If you are a new user, please sign up and obtain a SNU Parking Gateway Mastercard.<br>
+You'll be one among the many privileged customers at SNU with access to premium parking services, and trust us, we'll take great care of your vehicle in every way possible.<br>
+If you're here for on short one day trip or something like that, please use the Guest Login. 
+</p>
+<div style="margin-right:5%; margin-top:60%; float:right;">
+Helplines Numbers:
+<p>
+Admin   :+91 8447106301<br>
+Security:+91 8130928219<br>
+</p>
+</div>
+<div style="margin-top:55%; margin-left:5%; width:250px; font-size:12px;float:left;">
+Disclaimer:<br>
+This awesome and way too cool SNU Parking Gateway system is designed by Laksha, Shravan, Vignesh and Vimal.<br>
+Any attempt to steal this intellectual property will not be met with any resistance.<br>
+But of course, we'll make sure you are vanquished off the face of Earth.<br>
+If you are a prospective customer looking for intellectual beings to hangout and 'chill' with, get a cup of coffee, strong, black, sugar, and a wad of cash. Then call +91 8220752119.<br> 
+</div>
+</div>
+
+<div id="guest">
+<h2 style="text-align:center;">Guest Login</h2>
+<form name="guest" action="guestTicket.php" method="post">
+<p style="margin-left:50px;font-size:20px; margin-top:50px;">
+Choose Your Vehicle Type.<br><input type="radio" name="vehicle" value="4">Car</input>
+<input type="radio" name="vehicle" value="2" style="margin-left:40px;">Bike</input>
+<input type="radio" name="vehicle" value="H" style="margin-left:40px;">Heavy Vehicle</input>
+<input type="submit" style="margin-left:120px;">
+</p>
+</form>
+</div>
+
+<div id="customer">
+<h2 style="text-align:center;">Customer Login</h2>
+<p style="font-size:20px; margin-left:30px;">
+Swipe your SNU Parking Gateway Mastercard (or) enter the number on the face of your SNU Parking Gateway Mastercard.
+</p>
+
+<form name="login" action="customerEnter.php" method="post">
+<p style="margin-left:30px;">
+Card No.<input type="text" name="loginNo">
+Pin<input type="password" name="loginPin">
+<input type="submit" name="submit" style="margin-left:70px;">
+</p>
+<p style="margin-left:30px; margin-top:20px;">
+Vehicle Type<br><input type="radio" name="vehicle" value="4">Car</input>
+<input type="radio" name="vehicle" style="margin-left:40px;" value="2">Bike</input>
+<input type="radio" name="vehicle" style="margin-left:40px;" value="H">Heavy Vehicle</input>
+</form>
+
+<hr>
+
+<h2 style="text-align:center;">New User Sign Up!</h2>
+<form name="signUp" action="newCustomer" method="POST">
+<p style="margin-left:30px; margin-top:40px;">
+Name<input type="text" name="newName" size=15 style="margin-left:89px;">
+</p>
+<p style="margin-left:30px; margin-top:60px;">
+Email ID<input type="text" name="newEmail" size=15 style="margin-left:69px;">
+<input type="submit" style="margin-left:180px;">
+</p>
+<p style="margin-left:30px; margin-top:60px;">
+Mobile Number<input type="text" name="newMobile" size=15 maxlength=13 style="margin-left:25px;">
+</p>
+</form>
+</div>
+
+</body>
+</html>

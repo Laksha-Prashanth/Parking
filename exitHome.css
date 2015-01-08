@@ -1,0 +1,18 @@
+#boast
+{
+    height:50%;
+ width:100%;
+ border:1px solid black;
+ background:rgba(0,128,0,0.5); max-width: 100%; max-height: 100%; margin:auto; background-repeat: no-repeat; display:block }
+
+
+
+#guest
+{ 
+   height:50%;
+ width:100%;
+  border:1px solid black;
+ background: url("http://school.discoveryeducation.com/clipart/images/stopsign.gif") top right; float:center;
+ background-repeat: no-repeat; 
+}
+

@@ -1,0 +1,25 @@
+#boast
+{
+ height:850px;
+ width:49.5%;
+ border:1px solid black;
+ float:left;
+ background-color:#Fffafa;
+}
+
+#guest
+{
+ height:300px;
+ width:50%;
+ border:1px solid black;
+ float:right;
+ background-color:#69D2E7;
+}
+#customer
+{
+ height:545px;
+ width:50%;
+ border:1px solid black;
+ float:right;
+ background-color:#E0E4CC;
+}

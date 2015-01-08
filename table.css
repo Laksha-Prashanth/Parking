@@ -1,0 +1,19 @@
+<style>
+table,td,th
+{
+border:1px solid black;
+border-collapse:collapse;
+}
+td,th
+{
+text-align:center;
+width:10%;
+padding-top:1%;
+padding-bottom:1%;
+}
+th
+{
+background-color:#303030;
+color:white;
+}
+</style>

@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Parking Lot</title>
+</head>
+<body>
+<canvas id="canvas" width="900" height="700" style="border:1px solid black;"></canvas>
+
+<script>
+var c=document.getElementById("canvas");
+var ctx=c.getContext("2d");
+var west=new Array();
+var north=new Array();
+var south=new Array();
+c.addEventListener("mousedown",showInfo);
+
+function showInfo(event)
+{
+ var rect=c.getBoundingClientRect();
+ x=event.pageX-rect.left;
+ y=event.pageY-rect.top;
+ for(var i=0;i<30;i++)
+ {
+  if((x>west[i].x && y>west[i].y) && (x<west[i].x+west[i].width && y<west[i].y+west[i].height))
+   {
+    var s="Box W "+(i+1);
+    if(west[i].category)
+     s=s+" is currently occupied";
+    else
+     s=s+" is not occupied";
+    s=s+"\nDo you want to change it?";
+    var r=confirm(s);
+    if(r)
+     west[i].category=!west[i].category;
+    if(west[i].category)
+     ctx.strokeStyle="#aa0000";
+    else
+     ctx.strokeStyle="#ffffff";
+    ctx.fillStyle="#50aa50";
+    ctx.fillRect(west[i].x,west[i].y,60,34);
+    ctx.strokeText(west[i].text,west[i].textX,west[i].textY);
+    break;
+   }
+  else if((x>north[i].x && y>north[i].y) && (x<north[i].x+north[i].width && y<north[i].y+north[i].height))
+   {
+    var s="Box N "+(i+1);
+    if(north[i].category)
+     s=s+" is currently occupied";
+    else
+     s=s+" is not occupied";
+    s=s+"\nDo you want to change it?";
+    var r=confirm(s);
+    if(r)
+     north[i].category=!north[i].category;
+    if(north[i].category)
+     ctx.strokeStyle="#aa0000";
+    else
+     ctx.strokeStyle="#ffffff";
+    ctx.fillStyle="#5050aa";
+    ctx.fillRect(north[i].x,north[i].y,34,60);
+    ctx.strokeText(north[i].text,north[i].textX,north[i].textY);
+    break;
+   }
+   else if((x>south[i].x && y>south[i].y) && (x<south[i].x+south[i].width && y<south[i].y+south[i].height))
+   {
+    var s="Box S "+(i+1);
+    if(south[i].category)
+     s=s+" is currently occupied";
+    else
+     s=s+" is not occupied";
+    s=s+"\nDo you want to change it?";
+    var r=confirm(s);
+    if(r)
+     south[i].category=!south[i].category;
+    if(south[i].category)
+     ctx.strokeStyle="#aa0000";
+    else
+     ctx.strokeStyle="#ffffff";
+    ctx.fillStyle="#aa5050";
+    ctx.fillRect(south[i].x,south[i].y,34,60);
+    ctx.strokeText(south[i].text,south[i].textX,south[i].textY);
+    break;
+   }
+ }
+}
+function drawArrowAt(x,y)
+{
+ctx.fillStyle="#ffcc00";
+ctx.fillRect(x,y,90,50);
+ctx.beginPath();
+ctx.moveTo(x,y-25);
+ctx.lineTo(x,y+75);
+ctx.lineTo(x-50,y+25);
+ctx.lineTo(x,y-25);
+ctx.fill();
+}
+ctx.fillStyle="#aaaaaa";
+ctx.fillRect(300,200,550,300);
+
+
+//Box size: 60 x 34
+function Box(x,y,width,height,text,textX,textY)
+{
+ this.x=x;
+ this.y=y;
+ this.width=width;
+ this.height=height;
+ this.text=text;
+ this.textX=textX;
+ this.textY=textY;
+ this.carNo=0;
+ this.startTime=0;
+ this.endTime=0;
+ this.category=false;
+}
+
+for(var i=0;i<15;i++)
+{
+ west[i]=new Box(1,1+i*35,60,34,"W ".concat(i+1),20,i*35+22);
+ west[i+15]=new Box(100,1+i*35,60,34,"W ".concat(i+16),120,i*35+22);
+}
+ctx.fillStyle="#50aa50";
+ctx.strokeStyle="#ffffff";
+for(i=0;i<30;i++)
+{
+ ctx.fillRect(west[i].x,west[i].y,60,34);
+ ctx.strokeText(west[i].text,west[i].textX,west[i].textY);
+}
+
+
+for(i=0;i<15;i++)
+{
+ north[i]=new Box(375+i*35,1,34,60,"N ".concat(i+1),383+i*35,33);
+ north[i+15]=new Box(375+i*35,100,34,60,"N ".concat(i+16),383+i*35,133);
+}
+ctx.fillStyle="#5050aa";
+for(i=0;i<30;i++)
+{
+ ctx.fillRect(north[i].x,north[i].y,north[i].width,north[i].height);
+ ctx.strokeText(north[i].text,north[i].textX,north[i].textY);
+}
+
+
+
+for(i=0;i<15;i++)
+{
+ south[i]=new Box(1+i*35,550,34,60,"S ".concat(i+1),8+i*35,584);
+ south[i+15]=new Box(1+i*35,639,34,60,"S ".concat(i+16),7+i*35,675);
+}
+ctx.fillStyle="#aa5050";
+for(i=0;i<30;i++)
+{
+ ctx.fillRect(south[i].x,south[i].y,south[i].width,south[i].height);
+ ctx.strokeText(south[i].text,south[i].textX,south[i].textY);
+}
+</script>
+</body>
+</html>
