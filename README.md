@@ -47,8 +47,8 @@ administrator
 
 customers
 5 attributes
-  id char(5)
-  name char(255)
+  id char(5)\n
+  name char(255)\n
   email text
   mobile varchar(13)
   pin char(4)
