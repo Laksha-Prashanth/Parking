@@ -14,7 +14,7 @@
 
 <?php
 
-$link=mysqli_connect('localhost','root','laksha');
+$link=mysqli_connect('localhost','laksha','laksha');
 if(!$link)
 {
  echo 'Could not connect to server.';

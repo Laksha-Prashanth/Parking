@@ -6,7 +6,7 @@
 <body>
 Hello
 <?php echo 'World';
- $link = mysqli_connect('localhost','root','laksha');
+ $link = mysqli_connect('localhost','laksha','laksha');
  if(!$link)
  {
 	echo '<br>could not connect';
@@ -27,7 +27,7 @@ for($i=0;$i<3;$i++)
  {$c='N';$t='H';}
  for($count = 1;$count<=30;$count++)
  {
-  $sql = "INSERT INTO Slot VALUES('$c$count','$t','Y')";
+  $sql = "INSERT INTO slot VALUES('$c$count','$t','Y')";
   mysqli_query($link,$sql);
   
  }

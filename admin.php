@@ -5,7 +5,7 @@
 
 <body style="background-color:#f9f9f9;">
 
-<center><img src="http://snu.edu.in/images/home/shiv-nadar-logo.gif" /></center>
+<center><img src="https://cse.snu.edu.in/sites/all/themes/main/department/images/logo.png" /></center>
 <h2 style="text-align:center;color:#306ab0;">Parking Managment</h2>
 
 <!--Side slot div-->

@@ -31,7 +31,7 @@ $rand = '';
 foreach (array_rand($seed, 5) as $k) $rand .= $seed[$k];
 echo "<img src=\"http://www.barcodes4.me/barcode/c128a/$rand.png\">";
 echo "<br>Ticket number: $rand";
-$link = mysqli_connect('localhost','root','laksha');
+$link = mysqli_connect('localhost','laksha','laksha');
 if(!$link)
 {
  echo 'There seems to be some problem with connecting to our servers.<br> Please try again later';

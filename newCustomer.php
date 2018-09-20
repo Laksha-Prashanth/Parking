@@ -6,7 +6,7 @@
 <body>
 
 <?php
-$link = mysqli_connect('localhost','root','laksha');
+$link = mysqli_connect('localhost','laksha','laksha');
 if(!$link)
 {
  echo 'There seems to be some problem with connecting to our servers.<br> Please try again later';

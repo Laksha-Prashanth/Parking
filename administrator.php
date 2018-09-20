@@ -22,11 +22,11 @@ Administrator
 </head>
 
 <body style="background-color:#f9f9f9;">
-<center><img src="http://snu.edu.in/images/home/shiv-nadar-logo.gif" /></center>
+<center><img src="https://cse.snu.edu.in/sites/all/themes/main/department/images/logo.png" /></center>
 <h2 style="text-align:center;">Parking Management Administrator</h2>
 
 <?php
-$link = mysqli_connect('localhost','root','laksha');
+$link = mysqli_connect('localhost','laksha','laksha');
 if(!$link)
 {
  echo 'Could not connect to the database';
